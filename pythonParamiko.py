@@ -8,7 +8,7 @@ print "hello world"
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-ssh.connect('10.20.187.117',22,'root','Kingsoft_Kss2012')
+ssh.connect('10.20.187.117',22,'root','password')
 stdin, stdout,stderr = ssh.exec_command('ls')
 
 for testNumber in stdout.readlines():
