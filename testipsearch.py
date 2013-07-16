@@ -31,7 +31,7 @@ def  getIpHtml(ip):
 
 
 def main():
-	if len(sys.argv)==2:
+	if len(sys.argv) == 2 :
 		ip = sys.argv[1]
 	else:
 		ip = raw_input("please input IP:")
@@ -43,11 +43,12 @@ def main():
 	else:
 		ipNumberList = ip.split('.')
 
-		if int(ipNumberList[0]) == 0:
+		if int(ipNumberList[0]) == 0 :
 			print "IP first number is ERROR"
+			exit()
 
 		for number in range(len(ipNumberList)):
-			if ipNumberList[number] < 0 and ipNumberList[number] > 255:
+			if int(ipNumberList[number]) < 0 and int(ipNumberList[number]) > 255:
 				print "IP number is ERROR"
 				exit()
 
